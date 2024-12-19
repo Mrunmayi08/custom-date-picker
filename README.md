@@ -22,8 +22,10 @@ A modular and optimized Date Picker built with React, featuring intuitive naviga
    cd date-picker-project
    
 2. Install dependencies:
+    ```bash
    npm install
-3. Start the application
+4. Start the application
+    ```bash
    npm start
 
    
