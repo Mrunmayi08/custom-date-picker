@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 110vh;
+  background-color: #f8f8f8;
+}
+
+.date-picker {
+  display: flex;
+  width: 550px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.date-display {
+  background-color: #4db6ac;
+  color: rgb(244, 244, 244);
+  text-align: center;
+  /* padding: 10px; */
+  flex: 1;
+}
+
+.top-day {
+  background-color: #017e70;
+  height: 70px;
+}
+
+.top-day h3 {
+  font-size: 1.3rem;
+  padding: 20px;
+  height: 9vh;
+}
+
+.date-display h1 {
+  font-size: 4rem;
+  margin: 10px 0;
+}
+
+.middle-date {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 70px);
+  padding-bottom: 24px;
+}
+
+.top-item {
+  padding-top: 50px;
+  font-size: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+.top-item p {
+  font-size: 1.3rem;
+}
+.bottom-item {
+  padding-bottom: 0;
+  font-size: 2rem;
+}
+
+.calendar {
+  flex: 2;
+  background: white;
+  padding: 15px;
+}
+
+.switch-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 20px 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+}
+
+.switch span {
+  font-size: 1.1rem;
+  margin: 0 20px;
+  /* font-weight: bold; */
+  color: grey;
+}
+
+.switch button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: grey;
+  transition: color 0.3s;
+}
+
+.switch button:hover {
+  color: #00796b;
+}
+
+.weekdays,
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.weekday {
+  color: #4db6ac;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.day {
+  padding: 12px;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, color 0.3s;
+  color: #333;
+}
+
+.day:hover {
+  background-color: #e0f2f1;
+}
+
+.day.selected {
+  background-color: grey;
+  color: white;
+  font-weight: bold;
+}
+
+.day.disabled {
+  color: #ccc;
+  pointer-events: none;
+}
